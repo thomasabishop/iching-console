@@ -1,5 +1,14 @@
 {
+  "main": "build/index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc",
+    "develop": "tsc --watch"
+  },
   "devDependencies": {
     "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0"
   }
 }
