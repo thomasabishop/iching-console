@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import type { HexagramLines } from './types/hexagramLines';
+import type { HexagramLines } from './types';
 
 export default class PrintFullHexagram {
   protected readonly lookupLines: HexagramLines;
