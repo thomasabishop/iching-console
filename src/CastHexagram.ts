@@ -1,9 +1,12 @@
-export class CastHexagram {
-  private readonly states: number[];
+/*
+ * Randomly generate six sets of three integers of value 2 or 3
+ * and sum to create the six broken or unbroken lines of an
+ * I Ching hexagram. Add to array in reverse so that hexagram is drawn
+ * from the bottom up.
+ */
 
-  constructor() {
-    this.states = [2, 3];
-  }
+export class CastHexagram {
+  private readonly states: number[] = [2, 3];
 
   private randomInteger(): number {
     return Math.floor(Math.random() * Math.floor(2));
