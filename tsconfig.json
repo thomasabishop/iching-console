@@ -8,5 +8,7 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "outDir": "build"
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
