@@ -1,4 +1,4 @@
-import { CastHexagram } from './CastHexagram.js';
+import Controller from './Controller.js';
 
-const test = new CastHexagram();
-console.log(test.hexagram());
+const test = new Controller();
+test.getReading();

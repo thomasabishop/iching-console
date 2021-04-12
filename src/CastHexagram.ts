@@ -2,10 +2,12 @@
  * Randomly generate six sets of three integers of value 2 or 3
  * and sum to create the six broken or unbroken lines of an
  * I Ching hexagram. Add to array in reverse so that hexagram is drawn
- * from the bottom up.
+ : * from the bottom up.
  */
 
-export class CastHexagram {
+import type { HexagramPacket } from './types';
+
+export default class CastHexagram {
   private readonly states: number[] = [2, 3];
 
   private randomInteger(): number {
@@ -21,11 +23,25 @@ export class CastHexagram {
     return line;
   }
 
-  public hexagram(): number[] {
-    const hexagramLines: number[] = [];
+  private isChanging(lines: number[]): boolean {
+    return lines.some((line: number) => line === 6 || line === 9);
+  }
+
+  public hexagram(): HexagramPacket {
+    const hexagram: number[] = [];
     for (let i = 1; i <= 6; i++) {
-      hexagramLines.unshift(this.line);
+      hexagram.unshift(this.line);
     }
-    return hexagramLines;
+    if (!this.isChanging(hexagram)) {
+      return {
+        lines: hexagram,
+        isChanging: false,
+      };
+    } else {
+      return {
+        lines: hexagram,
+        isChanging: true,
+      };
+    }
   }
 }
