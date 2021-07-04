@@ -6,3 +6,8 @@ export type HexagramPacket = {
   lines: number[];
   isChanging: boolean;
 };
+
+export type LineReplacements = {
+  changing: number;
+  static: number;
+};

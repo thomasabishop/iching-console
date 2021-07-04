@@ -13,10 +13,10 @@ export default class PrintHexagram {
     9: chalk.green.bold('-o-'),
   };
   private readonly staticLines: HexagramLines = {
-    6: chalk.blue.bold('-x-'),
+    6: chalk.blue.bold('- -'),
     7: chalk.blue.bold('---'),
     8: chalk.blue.bold('- -'),
-    9: chalk.blue.bold('-o-'),
+    9: chalk.blue.bold('---'),
   };
   readonly hexagram: number[];
 
